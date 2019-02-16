@@ -1339,6 +1339,7 @@ class SubquerySuite extends QueryTest with SharedSQLContext {
         |               FROM r)
       """.stripMargin
     )
+    df_any.explain(true)
     val df_in = sql(
       """
         |SELECT a, b
